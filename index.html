@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecallRocket | Smart Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚀 RecallRocket</h1>
+    <p>Your Smart Flashcard Learning Space</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('study')">Study</button>
+    <button onclick="showSection('create')">Create Cards</button>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+</nav>
+
+<main>
+
+<section id="home" class="section active">
+    <h2>Welcome to RecallRocket!</h2>
+    <p>Learn smarter, remember longer and track your progress.</p>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3 id="totalCards">0</h3>
+            <p>Total Cards</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="learnedCards">0</h3>
+            <p>Mastered</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="studyCount">0</h3>
+            <p>Study Sessions</p>
+        </div>
+    </div>
+
+    <button class="main-btn" onclick="showSection('study')">
+        Start Learning
+    </button>
+</section>
+
+<section id="study" class="section">
+    <h2>Study Flashcards</h2>
+
+    <p id="cardNumber">Card 0 of 0</p>
+
+    <div class="flashcard" onclick="flipCard()">
+        <p id="cardLabel">QUESTION</p>
+        <h3 id="cardText">No cards available</h3>
+        <small>Click the card to reveal the answer</small>
+    </div>
+
+    <div class="controls">
+        <button onclick="previousCard()">Previous</button>
+        <button onclick="flipCard()">Flip Card</button>
+        <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="controls">
+        <button class="easy" onclick="markLearned()">I Know This ✓</button>
+        <button class="shuffle" onclick="shuffleCards()">Shuffle</button>
+    </div>
+</section>
+
+<section id="create" class="section">
+    <h2>Create a Flashcard</h2>
+
+    <form id="cardForm">
+        <label>Question</label>
+        <textarea id="question" placeholder="Enter your question" required></textarea>
+
+        <label>Answer</label>
+        <textarea id="answer" placeholder="Enter your answer" required></textarea>
+
+        <label>Category</label>
+        <select id="category">
+            <option value="General">General</option>
+            <option value="Science">Science</option>
+            <option value="Technology">Technology</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Programming">Programming</option>
+        </select>
+
+        <button type="submit" class="main-btn">Add Flashcard</button>
+    </form>
+</section>
+
+<section id="dashboard" class="section">
+    <h2>Learning Dashboard</h2>
+    <p>Your learning progress at a glance.</p>
+
+    <div class="progress-box">
+        <h3>Mastery Progress</h3>
+        <div class="progress-track">
+            <div id="progressBar"></div>
+        </div>
+        <p id="progressText">0% completed</p>
+    </div>
+
+    <h3>Your Flashcards</h3>
+    <div id="cardList"></div>
+
+    <button class="main-btn" onclick="resetProgress()">
+        Reset Learning Progress
+    </button>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 RecallRocket | Learn • Revise • Remember</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

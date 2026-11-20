@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4ff;
+    color: #26324a;
+}
+
+header {
+    background: linear-gradient(120deg, #342b80, #7567df);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #242052;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #dedaff;
+    color: #29245d;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.section {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #25205215;
+    text-align: center;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    color: #453b9a;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: #eeecff;
+    padding: 22px;
+    border-radius: 12px;
+    min-width: 150px;
+}
+
+.stat-card h3 {
+    color: #5546b9;
+    font-size: 28px;
+}
+
+.main-btn {
+    background: #584bc1;
+    color: white;
+    margin-top: 15px;
+}
+
+.flashcard {
+    background: linear-gradient(135deg, #5144ac, #8779e9);
+    color: white;
+    padding: 45px 20px;
+    border-radius: 18px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 20px #5144ac35;
+}
+
+.flashcard h3 {
+    font-size: 23px;
+}
+
+.flashcard small {
+    opacity: 0.85;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 15px;
+}
+
+.easy {
+    background: #c9f2d9;
+    color: #176a3b;
+}
+
+.shuffle {
+    background: #ffe6bd;
+    color: #81500b;
+}
+
+form {
+    max-width: 550px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+textarea, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.progress-box {
+    background: #f1efff;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.progress-track {
+    height: 18px;
+    background: #d5d1ef;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #6655ce;
+    transition: width 0.4s;
+}
+
+#cardList {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.card-item {
+    background: #f2f0ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 9px;
+    overflow-wrap: anywhere;
+}
+
+.card-item button {
+    margin-top: 10px;
+    background: #ffd9d9;
+    color: #8d2424;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #242052;
+    color: white;
+    margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav button {
+        padding: 9px 12px;
+    }
+
+    .section {
+        padding: 20px 12px;
+    }
+
+    .stat-card {
+        min-width: 120px;
+    }
+}
